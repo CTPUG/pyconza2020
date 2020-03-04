@@ -1,0 +1,7 @@
+# Created stuff for the pyconza site
+static/vendor
+node_modules/
+localstatic/
+localmedia/
+localsettings.py
+*uwsgi*
