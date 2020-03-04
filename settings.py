@@ -176,4 +176,6 @@ BUILD_DIR = os.path.join(pyconzadir, "mirror")
 # Will be needed for the static site generation
 # WAFER_HIDE_LOGIN = True
 
-ROOT_URLCONF = 'urls'
+# Needed to add pyconza-funding app
+# INSTALLED_APPS = ('pyconza.funding', ) + INSTALLED_APPS
+# ROOT_URLCONF = 'urls'
