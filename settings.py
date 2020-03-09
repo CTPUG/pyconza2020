@@ -9,7 +9,7 @@ except ImportError:
     pass
 
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 pyconzadir = os.path.dirname(__file__)
 
