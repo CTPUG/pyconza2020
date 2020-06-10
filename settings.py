@@ -153,7 +153,7 @@ MARKITUP_FILTER = (
 )
 
 # Talks submissions are open
-WAFER_TALKS_OPEN = False
+WAFER_TALKS_OPEN = True
 
 # Set the timezone to the conference timezone
 USE_TZ = True
