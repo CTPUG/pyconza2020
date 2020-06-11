@@ -28,7 +28,7 @@ WAFER_MENUS += (
  #       "url": reverse_lazy("wafer_page", args=("venue",)),
  #   },
  #   {"menu": "tickets", "label": _("Tickets"), "items": []},
- #   {"menu": "sponsors", "label": _("Sponsors"), "items": []},
+    {"menu": "sponsors", "label": _("Sponsors"), "items": []},
     {
         "menu": "talks",
         "label": _("Talks"),
