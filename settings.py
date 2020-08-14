@@ -140,15 +140,13 @@ MARKITUP_FILTER = (
             "markdown.extensions.codehilite",
             "mdx_variables",
         ],
-        #"extension_configs": {
-        #    "mdx_variables": {
-        #        "vars": {
-        #            "main_conference_tickets_sold": main_conference_tickets_sold,
-        #            'tutorial_unknown':
-        #                lambda: tickets_sold([]),
-        #        }
-        #    }
-        #},
+        "extension_configs": {
+            "mdx_variables": {
+                "vars": {
+                    "main_conference_tickets_sold": main_conference_tickets_sold,
+                }
+            }
+        },
     },
 )
 
