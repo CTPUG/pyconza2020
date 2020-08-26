@@ -365,13 +365,18 @@ a {
   font-weight: bold;
 }
 
+a:hover,
+a:focus {
+  color: #00ada1;
+}
+
 #main section section a {
   color: #841064;
 }
 
-a:hover,
-a:focus {
-  color: #e4838f;
+#main section section a:hover,
+#main section section a:focus {
+  color: #d77351;
 }
 
 /* NAV */
