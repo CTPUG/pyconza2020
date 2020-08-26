@@ -45,7 +45,8 @@ body {
   margin: 0;
   padding: 0 24px;
   line-height: 47px;
-  background: black;
+  background-color: black;
+  background-image: linear-gradient(to left, #841064, black);
   font-family: 'Alegreya';
   font-size: 30px;
   font-weight: bold;
@@ -68,7 +69,7 @@ body {
 
 #main section h1,
 #main section section h2 {
-  margin: 10px 0 0;
+  margin: 0 -10px;
   padding: 0 24px;
   line-height: 47px;
   background-color: black;
@@ -415,6 +416,13 @@ a:focus {
 .profile-links {
   padding: 25px;
   align-items: flex-end;
+}
+
+form {
+  background: #d77351;
+  background-image: linear-gradient(to left, #f1e2c4, #d77351);
+  padding: 10px;
+  color: black;
 }
 
 @media only screen and (max-device-width:768px) {
