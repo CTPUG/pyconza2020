@@ -9,9 +9,9 @@ body {
 
 #wrap {
   min-height: 100%;  /* put the background behind the clouds -- see CLOUDS further down */
-  background: url("../img/clouds_bottom.png"), url("../img/clouds_top.png"), url("../img/pattern.png"), black;
-  background-repeat: no-repeat, no-repeat, repeat, repeat;
-  background-position: bottom center, top center, 0 0, 0 0;
+  background: url("../img/clouds_top.png"), url("../img/clouds_bottom.png"), url("../img/pattern.png"), black;
+  background-repeat: repeat-y, no-repeat, repeat, repeat;
+  background-position: top center, bottom center, 0 0, 0
 }
 
 #main {
