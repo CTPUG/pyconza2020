@@ -1,14 +1,3 @@
-/* PALETTE
-
-darker  - lighter
-
-#002642 - #5c7486 (blue)
-#840032 - #a54569 (magenta)
-#e59500 - #ecb145 (yellow)
-#e5dada - #eee7e7 (cream)
-#191a24 - #6c6d73 (grey)
-*/
-
 html {
   background: black;
 }
@@ -20,13 +9,13 @@ body {
 
 #wrap {
   min-height: 100%;  /* put the background behind the clouds -- see CLOUDS further down */
-  background: url("../img/clouds_bottom.png"), url("../img/clouds_top.png"), url("../img/pattern.png"), #e5dada;
+  background: url("../img/clouds_bottom.png"), url("../img/clouds_top.png"), url("../img/pattern.png"), black;
   background-repeat: no-repeat, no-repeat, repeat, repeat;
   background-position: bottom center, top center, 0 0, 0 0;
 }
 
 #main {
-  color: #e5dada;
+  color: #f9b121;
   padding-top: 1em;
 }
 
@@ -56,11 +45,11 @@ body {
   margin: 0;
   padding: 0 24px;
   line-height: 47px;
-  background: #191a24;
+  background: black;
   font-family: 'Alegreya';
   font-size: 30px;
   font-weight: bold;
-  color: #e59500;
+  color: #00ada1;
 }
 
 #main section {
@@ -68,13 +57,13 @@ body {
   float: left;
   padding: 0 10px 10px 10px;
   color: black;
-  background: #e5dada;
+  background: #f9b121;
   margin-bottom: 1em;
-  background: #e5dada;
+  background-image: linear-gradient(to left, #f1e2c4, #f9b121);
 }
 
 #main section section {
-  background: #eee7e7;
+  background: #f1e2c4;
 }
 
 #main section h1,
@@ -82,12 +71,12 @@ body {
   margin: 10px 0 0;
   padding: 0 24px;
   line-height: 47px;
-  background-color: #191a24;
-  background-image: linear-gradient(to left, #840032, #191a24);
+  background-color: black;
+  background-image: linear-gradient(to left, #841064, black);
   font-family: 'Alegreya';
   font-size: 30px;
   font-weight: bold;
-  color: #e59500;
+  color: #00ada1;
   margin-bottom: 0.5em;
 }
 
@@ -104,75 +93,88 @@ body {
 }
 
 #main table tr {
-  border-bottom: 2px solid #e5dada;
+  border-bottom: 1px solid #b5b7c1;
 }
 
 #main table th,
 #main table td {
   padding: 8px 12px;
   text-align: left;
-  border-right: 2px solid #e5dada;
-  background: #ecb145;
+  border: 1px solid #b5b7c1;
+  background: #aaf1a3;
   font-size: 16px;
-  color: #191a24;
+  color: black;
 }
 
 #main table td.title {
-  background-color: #191a24;
-  background-image: linear-gradient(to left, #840032, #191a24);
+  background-color: black;
+  background-image: linear-gradient(to left, #841064, black);
+  border: 1px solid #6c6d73;
   font-size: 16px;
-  color: #e5dada;
+  color: #00ada1;
   line-height: 26px;
 }
 
 #main table th,
 #main table td.scheduleslot {
-  background: #e59500;
-  color: #191a24;
+  background: #00ada1;
+  color: black;
+  border: 1px solid #6c6d73;
   font-weight: normal;
   vertical-align: top;
 }
 
 #main table th a,
 #main table td a {
-  color: #002642;
+  color: black;
 }
 
 #main table td.title a {
-  color: #e5dada;
+  color: #00ada1;
+}
+
+#main table td a:hover {
+  color: #00ada1;
+}
+
+#main table th a:hover,
+#main table td.title a:hover {
+  color: #aaf1a3;
 }
 
 #main table th span {
   font-size: 16px;
   font-weight: bold;
-  color: #191a24;
+  color: black;
   line-height: 26px;
 }
 
 /* Highlights */
 
 #main table td.schedule {
-  background: #e5dada;
-  border: solid 2px #eee7e7;
+  background: #aaf1a3;
+  border: solid 1px #b5b7c1;
 }
 
 #main table td.schedule-break {
-  background: #ecb145;
+  background: #f1e2c4;
   text-align: center;
+  vertical-align: middle;
 }
 
 #main table td.schedule-keynote {
-  background: #e5dada;
-  background-image: linear-gradient(to left, #e5dada, #a54569);
+  background: #f1e2c4;
+  background-image: linear-gradient(to left, #6de4b8, #e4838f);
   text-align: center;
 }
 
 #main table td.unavailable {
-  background: #002642;
+  background: #6c6d73;
   font-size: 16px;
-  color: #e59500;
+  color: #00ada1;
   line-height: 26px;
   text-align: center;
+  vertical-align: middle;
 }
 
 #main table th.schedule-highlight-venue {
@@ -180,17 +182,21 @@ body {
 }
 
 #main table td.schedule-highlight-venue a {
-   color: #007060;
+   color: #6de4b8;
 }
 
 /* We unset the highlight-venue effect for breaks using CSS ordering */
 #main table td.schedule-break a {
-  color: #002642;
+  color: black;
+}
+
+#main table td.schedule-break a:hover {
+  color: #00ada1;
 }
 
 #main table td.schedule-placeholder {
-  background: #e5dada;
-  border: solid 2px #eee7e7;
+  background: #f9b121;
+  border: solid 1px #b5b7c1;
   font-style: italic;
 }
 
@@ -217,7 +223,7 @@ body {
   text-align: center;
   font-family: 'Alegreya';
   font-size: 30px;
-  color: #ecb145;
+  color: #aaf1a3;
   padding-bottom: 15px;
 }
 
@@ -225,13 +231,13 @@ body {
   text-align: center;
   font-family: 'Alegreya';
   font-size: 20px;
-  color: #e5dada;
+  color: #f9b121;
   line-height: 22px;
   padding-bottom: 20px;
 }
 
 #credits a {
-  color: #e59500;
+  color: #00ada1;
 }
 
 #logo_bottom {
@@ -244,7 +250,7 @@ body {
   position: fixed;
   bottom: 0;
   background: black;
-  color: #e5dada;
+  color: #f9b121;
   width: 100%;
   clear: both;
   padding: 10px 0px;
@@ -254,7 +260,7 @@ body {
 
 .wafer-speakers .wafer-speakers-logo img {
   border-radius: 50%;
-  border: 4px solid #e59500;
+  border: 4px solid #00ada1;
   padding: 10px;
 }
 
@@ -275,7 +281,7 @@ body {
 
 .wafer-profile #profile-avatar img {
   border-radius: 50%;
-  border: 4px solid #e59500;
+  border: 4px solid #00ada1;
   padding: 10px;
   margin-left: 10px;
 }
@@ -303,9 +309,9 @@ ul.btn-group {
 
 .btn-primary {
   margin: 0 0 2px 2px;
-  background-color: #ecb145;
+  background-color: #00ada1;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: #eee7e7;
+  color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -313,9 +319,10 @@ ul.btn-group {
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #e59500;
+  background-color: #aaf1a3;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: white;
+  color: #00ada1;
+  text-shadow: none;
 }
 
 .btn-primary.disabled,
@@ -327,9 +334,9 @@ ul.btn-group {
 
 .btn-secondary {
   margin: 0 0 4px 4px;
-  background-color: #5c7486;
+  background-color: #f9b121;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: #eee7e7;
+  color: #f1e2c4;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -337,7 +344,7 @@ ul.btn-group {
 .btn-secondary:focus,
 .btn-secondary:active,
 .btn-secondary.active {
-  background-color: #002642;
+  background-color: #f1e2c4;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   color: white;
 }
@@ -350,20 +357,20 @@ ul.btn-group {
 }
 
 a {
-  color: #a54569;
+  color: #841064;
   font-weight: bold;
 }
 
 a:hover,
 a:focus {
-  color: #840032;
+  color: #e4838f;
 }
 
 /* NAV */
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link {
   background-color: black;
-  color: #e5dada;
+  color: #f9b121;
   padding: 10px;
   margin: 0px;
   line-height: 30px;
@@ -374,7 +381,7 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-brand:focus,
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: #e59500;
+  color: #00ada1;
 }
 
 .navbar-dark .navbar-nav li.dropdown > .dropdown-toggle .caret,
@@ -386,9 +393,9 @@ a:focus {
 .dropdown-menu > li > a:focus,
 .dropdown-submenu:hover > a,
 .dropdown-submenu:focus > a {
-  color: #191a24;
-  background-color: #e59500;
-  background-image: linear-gradient(to left, #e59500, #ecb145);
+  color: black;
+  background-color: #00ada1;
+  background-image: linear-gradient(to left, #00ada1, #aaf1a3);
 }
 
 .container-fluid {
