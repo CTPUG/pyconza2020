@@ -15,7 +15,7 @@ body {
 }
 
 #main {
-  color: #f9b121;
+  color: #d77351;
   padding-top: 1em;
 }
 
@@ -57,9 +57,9 @@ body {
   float: left;
   padding: 0 10px 10px 10px;
   color: black;
-  background: #f9b121;
+  background: #d77351;
   margin-bottom: 1em;
-  background-image: linear-gradient(to left, #f1e2c4, #f9b121);
+  background-image: linear-gradient(to left, #f1e2c4, #d77351);
 }
 
 #main section section {
@@ -195,7 +195,7 @@ body {
 }
 
 #main table td.schedule-placeholder {
-  background: #f9b121;
+  background: #d77351;
   border: solid 1px #b5b7c1;
   font-style: italic;
 }
@@ -231,7 +231,7 @@ body {
   text-align: center;
   font-family: 'Alegreya';
   font-size: 20px;
-  color: #f9b121;
+  color: #d77351;
   line-height: 22px;
   padding-bottom: 20px;
 }
@@ -250,7 +250,7 @@ body {
   position: fixed;
   bottom: 0;
   background: black;
-  color: #f9b121;
+  color: #d77351;
   width: 100%;
   clear: both;
   padding: 10px 0px;
@@ -370,7 +370,7 @@ a:focus {
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link {
   background-color: black;
-  color: #f9b121;
+  color: #d77351;
   padding: 10px;
   margin: 0px;
   line-height: 30px;
