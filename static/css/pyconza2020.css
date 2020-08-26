@@ -119,15 +119,18 @@ body {
 #main table th,
 #main table td.scheduleslot {
   background: #00ada1;
-  color: black;
+  color: white;
   border: 1px solid #6c6d73;
   font-weight: normal;
   vertical-align: top;
 }
 
-#main table th a,
+#main table th a {
+  color: white;
+}
+
 #main table td a {
-  color: black;
+  color: #841064;
 }
 
 #main table td.title a {
