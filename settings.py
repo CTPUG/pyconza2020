@@ -127,6 +127,17 @@ def main_conference_tickets_sold():
     return Ticket.objects.exclude(type_id__in=tutorial_type_ids).count()
 
 
+def early_bird_tickets_remaining():
+    """ Return number of early bird tickets remaining. """
+    early_bird_ticket_types = [
+        "Student (Early Bird)",
+        "Individual (Early Bird)",
+        "Corporate (Early Bird)",
+        "Pensioner (Early Bird)",
+    ]
+    return 80 - tickets_sold(early_bird_ticket_types)
+
+
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 MARKITUP_FILTER = (
     "markdown.markdown",
@@ -144,6 +155,7 @@ MARKITUP_FILTER = (
             "mdx_variables": {
                 "vars": {
                     "main_conference_tickets_sold": main_conference_tickets_sold,
+                    "early_bird_tickets_remaining": early_bird_tickets_remaining,
                 }
             }
         },
