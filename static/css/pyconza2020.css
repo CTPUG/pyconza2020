@@ -312,7 +312,7 @@ ul.btn-group {
   margin: 0 0 2px 2px;
   background-color: #00ada1;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: white;
+  color: white !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -337,7 +337,7 @@ ul.btn-group {
   margin: 0 0 4px 4px;
   background-color: #00ada1;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: white;
+  color: white !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -360,6 +360,10 @@ ul.btn-group {
 a {
   color: white;
   font-weight: bold;
+}
+
+#main section section a {
+  color: #841064;
 }
 
 a:hover,
