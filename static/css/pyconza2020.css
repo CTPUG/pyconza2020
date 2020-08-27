@@ -153,6 +153,10 @@ body {
   line-height: 26px;
 }
 
+#notes a {
+  color: #841064;
+}
+
 /* Highlights */
 
 #main table td.schedule {
