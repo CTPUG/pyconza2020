@@ -437,6 +437,11 @@ form {
   color: black;
 }
 
+.text-muted {
+    color: #313539 !important;
+    font-style: italic;
+}
+
 @media only screen and (max-device-width:768px) {
   #footer {
     position: static;
