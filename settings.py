@@ -22,29 +22,29 @@ TEMPLATES[0]["DIRS"] = (os.path.join(pyconzadir, "templates"),) + TEMPLATES[0]["
 
 WAFER_MENUS += (
     {"menu": "about", "label": _("About"), "items": []},
- #   {
- #       "name": "venue",
- #       "label": _("Venue"),
- #       "url": reverse_lazy("wafer_page", args=("venue",)),
- #   },
+    #   {
+    #       "name": "venue",
+    #       "label": _("Venue"),
+    #       "url": reverse_lazy("wafer_page", args=("venue",)),
+    #   },
     {"menu": "tickets", "label": _("Tickets"), "items": []},
     {"menu": "sponsors", "label": _("Sponsors"), "items": []},
     {
         "menu": "talks",
         "label": _("Talks"),
         "items": [
- #           {"name": "schedule", "label": _("Schedule"),
- #            "url": reverse_lazy("wafer_full_schedule")},
- #           {
- #               "name": "accepted-talks",
- #               "label": _("Accepted Talks"),
- #               "url": reverse_lazy("wafer_users_talks"),
- #           },
- #           {
- #               "name": "speakers",
- #               "label": _("Speakers"),
- #               "url": reverse_lazy("wafer_talks_speakers"),
- #           },
+            #           {"name": "schedule", "label": _("Schedule"),
+            #            "url": reverse_lazy("wafer_full_schedule")},
+            #           {
+            #               "name": "accepted-talks",
+            #               "label": _("Accepted Talks"),
+            #               "url": reverse_lazy("wafer_users_talks"),
+            #           },
+            #           {
+            #               "name": "speakers",
+            #               "label": _("Speakers"),
+            #               "url": reverse_lazy("wafer_talks_speakers"),
+            #           },
         ],
     },
     {"menu": "news", "label": _("News"), "items": []},
@@ -112,6 +112,7 @@ WAFER_MENUS += (
 def tickets_sold(ticket_types):
     """ Return number of tickets sold. """
     from wafer.tickets.models import Ticket, TicketType
+
     ticket_type_ids = TicketType.objects.filter(name__in=ticket_types)
     return Ticket.objects.filter(type_id__in=ticket_type_ids).count()
 
@@ -120,11 +121,15 @@ def main_conference_tickets_sold():
     """ Return number of tickets sold for the main conference. """
     from wafer.tickets.models import Ticket, TicketType
 
-    TUTORIAL_TICKET_TYPES = [
-    ]
+    TUTORIAL_TICKET_TYPES = []
     tutorial_type_ids = TicketType.objects.filter(name__in=TUTORIAL_TICKET_TYPES)
 
     return Ticket.objects.exclude(type_id__in=tutorial_type_ids).count()
+
+
+def main_conference_tickets_remaining():
+    """ Return number of main conference tickets remaining. """
+    return max(0, 200 - main_conference_tickets_sold())
 
 
 def early_bird_tickets_remaining():
@@ -135,7 +140,7 @@ def early_bird_tickets_remaining():
         "Corporate (Early Bird)",
         "Pensioner (Early Bird)",
     ]
-    return 80 - tickets_sold(early_bird_ticket_types)
+    return max(0, 80 - tickets_sold(early_bird_ticket_types))
 
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -155,6 +160,7 @@ MARKITUP_FILTER = (
             "mdx_variables": {
                 "vars": {
                     "main_conference_tickets_sold": main_conference_tickets_sold,
+                    "main_conference_tickets_remaining": main_conference_tickets_remaining,
                     "early_bird_tickets_remaining": early_bird_tickets_remaining,
                 }
             }
