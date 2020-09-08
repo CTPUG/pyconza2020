@@ -182,7 +182,7 @@ STATIC_ROOT = os.path.join(pyconzadir, "localstatic")
 MEDIA_ROOT = os.path.join(pyconzadir, "localmedia")
 
 # Ticket sales are open
-WAFER_REGISTRATION_OPEN = False
+WAFER_REGISTRATION_OPEN = True
 WAFER_REGISTRATION_MODE = "ticket"
 
 # Point static mirror away from the default, which is relative to the
