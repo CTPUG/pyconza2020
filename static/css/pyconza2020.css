@@ -304,6 +304,22 @@ body {
   padding: 10px;
 }
 
+/* Talks on profile pages */
+
+.card {
+    background: #f1e2c4;
+    border-radius: 0;
+}
+
+.card a {
+    color: #841064;
+}
+
+.card a:hover,
+.card a:focus {
+  color: #d77351;
+}
+
 /* fix icons on top nav bar */
 ul.navbar-nav li.icon a {
   padding: 12px;
