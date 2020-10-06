@@ -23,7 +23,7 @@ TEMPLATES[0]["DIRS"] = (os.path.join(pyconzadir, "templates"),) + TEMPLATES[0]["
 WAFER_MENUS += (
     {"menu": "about", "label": _("About"), "items": []},
     {
-        "name": "venue",
+        "menu": "venue",
         "label": _("Venue"),
         "items": [],
     },
