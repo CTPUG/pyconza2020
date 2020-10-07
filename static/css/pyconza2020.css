@@ -65,7 +65,7 @@ body {
 
 #main section section {
   background: #f1e2c4;
-  border: solid 1px #d77351;
+  box-shadow: 2px 2px 15px -5px #d77351;
 }
 
 #main section h1,
